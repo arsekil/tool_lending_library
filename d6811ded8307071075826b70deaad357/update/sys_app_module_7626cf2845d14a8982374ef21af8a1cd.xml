@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Tool Lending Library">cc1a576b92b246dd82145c8e6cb2b9b7</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title/>
+        <mobile_view_name/>
+        <name>x_828868_tool_le_0_equipment</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>false</require_confirmation>
+        <roles>x_828868_tool_le_0.librarian</roles>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 14:19:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7626cf2845d14a8982374ef21af8a1cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Equipment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_update_name>sys_app_module_7626cf2845d14a8982374ef21af8a1cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 14:19:33</sys_updated_on>
+        <timeline_page/>
+        <title>Equipment</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Limited access role for library members</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>2qNzbnVxuVljbNTQC/FFMbur6diEYk0FvdsXLcXOefw=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_828868_tool_le_0.member</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>member</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 14:19:42</sys_created_on>
+        <sys_id>2d0ee96436c64c0899ab4c9b5d1dfc19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_828868_tool_le_0.member</sys_name>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_update_name>sys_user_role_2d0ee96436c64c0899ab4c9b5d1dfc19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 14:19:42</sys_updated_on>
+    </sys_user_role>
+</record_update>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="DELETE">
+    <sys_id>3e199cd983f04865b4f481ae6bdc2ad8</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_app_module_3e199cd983f04865b4f481ae6bdc2ad8</sys_update_name>
+    <active>true</active>
+    <application>cc1a576b92b246dd82145c8e6cb2b9b7</application>
+    <link_type>DIRECT</link_type>
+    <order>600</order>
+    <query>x_828868_tool_le_0_member_catalog.do</query>
+    <roles>x_828868_tool_le_0.member</roles>
+    <title>Equipment Catalog</title>
+  </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</application>
+        <file_path/>
+        <instance_id>02124592fb464f9c1feef633beefdc83</instance_id>
+        <instance_name>dev437191</instance_name>
+        <name>sys_app_module_3e199cd983f04865b4f481ae6bdc2ad8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>3e199cd983f04865b4f481ae6bdc2ad8</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_app_module_3e199cd983f04865b4f481ae6bdc2ad8</sys_update_name>
+    <active>true</active>
+    <application>cc1a576b92b246dd82145c8e6cb2b9b7</application>
+    <link_type>DIRECT</link_type>
+    <order>600</order>
+    <query>x_828868_tool_le_0_member_catalog.do</query>
+    <roles>x_828868_tool_le_0.member</roles>
+    <title>Equipment Catalog</title>
+  </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>-1951440692</payload_hash>
+        <record_name>Equipment Catalog</record_name>
+        <reverted_from/>
+        <source>0f6c6aa98303471075826b70deaad349</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 20:44:54</sys_created_on>
+        <sys_id>ab6caea98303471075826b70deaad366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a059915e970000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 20:44:54</sys_updated_on>
+        <type>Module</type>
+        <update_guid>a76caea9e40347107ffe18cd00e6b665</update_guid>
+        <update_guid_history>a76caea9e40347107ffe18cd00e6b665:-1951440692,ba32e625efcf0710c41bc9509f569c1b:2050170422,36349165f347071057d71578fd8435aa:-1298531236</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Equipment Catalog">7f1f6e218343471075826b70deaad391</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 20:56:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>1e484d96fb58446196561432136daa51</sys_id>
+        <sys_metadata>3e199cd983f04865b4f481ae6bdc2ad8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Member Catalog</sys_name>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_scope_delete display_value="">8852412879ba45918a5b777885201979</sys_scope_delete>
+        <sys_update_name>sys_app_module_3e199cd983f04865b4f481ae6bdc2ad8</sys_update_name>
+        <sys_update_version display_value="sys_app_module_3e199cd983f04865b4f481ae6bdc2ad8">ab6caea98303471075826b70deaad366</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 20:56:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>request_to_borrow</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>current.status == 'available'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_icon/>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_button_icon/>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Request to Borrow</name>
+        <onclick>requestBorrowAction()</onclick>
+        <order>100</order>
+        <script><![CDATA[function requestBorrowAction() {
+    var dueDate = prompt('Enter the due date for returning this equipment (YYYY-MM-DD):');
+    if (!dueDate) return;
+
+    var equipmentId = g_form.getUniqueValue();
+
+    // Step 1: Look up the current user's member record
+    var memberXhr = new XMLHttpRequest();
+    memberXhr.open('GET', '/api/now/table/x_828868_tool_le_0_members?sysparm_query=user=' + g_user.userID + '&sysparm_limit=1&sysparm_fields=sys_id', false);
+    memberXhr.setRequestHeader('Accept', 'application/json');
+    memberXhr.setRequestHeader('X-UserToken', g_ck);
+    memberXhr.send();
+
+    if (memberXhr.status !== 200) {
+        g_form.addErrorMessage('Error looking up your member record.');
+        return;
+    }
+
+    var memberResult = JSON.parse(memberXhr.responseText);
+    if (!memberResult.result || memberResult.result.length === 0) {
+        g_form.addErrorMessage('You are not registered as a library member.');
+        return;
+    }
+
+    var memberId = memberResult.result[0].sys_id;
+
+    // Step 2: Create the loan record via REST API
+    var loanXhr = new XMLHttpRequest();
+    loanXhr.open('POST', '/api/now/table/x_828868_tool_le_0_loan_rec', false);
+    loanXhr.setRequestHeader('Content-Type', 'application/json');
+    loanXhr.setRequestHeader('Accept', 'application/json');
+    loanXhr.setRequestHeader('X-UserToken', g_ck);
+    loanXhr.send(JSON.stringify({
+        equipment: equipmentId,
+        member: memberId,
+        status: 'pending_approval',
+        due_date: dueDate
+    }));
+
+    if (loanXhr.status === 201) {
+        var loanResult = JSON.parse(loanXhr.responseText);
+        window.location.href = '/x_828868_tool_le_0_loan_rec.do?sys_id=' + loanResult.result.sys_id;
+    } else {
+        g_form.addErrorMessage('Error creating borrow request. Please try again.');
+    }
+}]]></script>
+        <show_form_icon_only>false</show_form_icon_only>
+        <show_insert>true</show_insert>
+        <show_list_icon_only>false</show_list_icon_only>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 14:19:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cae81cdab38e44129b1a5c6168243895</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request to Borrow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_update_name>sys_ui_action_cae81cdab38e44129b1a5c6168243895</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 14:19:41</sys_updated_on>
+        <table>x_828868_tool_le_0_equipment</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

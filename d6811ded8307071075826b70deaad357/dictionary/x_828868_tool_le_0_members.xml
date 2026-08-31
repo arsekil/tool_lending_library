@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1fb074e70e1e4da39acec8b9083800f0" label="Members" name="x_828868_tool_le_0_members" type="collection">
+        <element label="Contact Phone" max_length="20" name="contact_phone" type="string"/>
+        <element label="Contact Email" max_length="255" name="contact_email" type="email"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element default="member" label="User Role" max_length="40" name="user_role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Member" sequence="1" value="member"/>
+                <element inactive_on_update="false" label="Librarian" sequence="2" value="librarian"/>
+            </choice>
+        </element>
+        <element label="Linked User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element default="active" label="Membership Status" max_length="40" name="membership_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+                <element inactive_on_update="false" label="Inactive" sequence="2" value="inactive"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
