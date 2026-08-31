@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <sys_id>c5edbcbd1b9549558005d900b1e88ce3</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_ui_action_c5edbcbd1b9549558005d900b1e88ce3</sys_update_name>
+    <action_name>send_to_maintenance</action_name>
+    <active>true</active>
+    <client/>
+    <client_script_v2/>
+    <comments/>
+    <condition>current.status != 'in_maintenance'</condition>
+    <form_action>true</form_action>
+    <form_button>true</form_button>
+    <form_button_v2>false</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>false</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style>destructive</form_style>
+    <format_for_configurable_workspace>false</format_for_configurable_workspace>
+    <hint/>
+    <isolate_script>false</isolate_script>
+    <list_action>false</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style/>
+    <messages/>
+    <name>Send to Maintenance</name>
+    <onclick/>
+    <order>100</order>
+    <script><![CDATA[
+        current.setValue('status', 'in_maintenance');
+        current.update();
+        action.setRedirectURL(current);
+    ]]></script>
+    <show_insert>true</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_name>Send to Maintenance</sys_name>
+    <sys_overrides/>
+    <table>x_828868_tool_le_0_equipment</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible>false</ui16_compatible>
+  </sys_ui_action>
+</record_update>

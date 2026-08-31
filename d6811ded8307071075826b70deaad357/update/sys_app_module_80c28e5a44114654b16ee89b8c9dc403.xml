@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>80c28e5a44114654b16ee89b8c9dc403</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_app_module_80c28e5a44114654b16ee89b8c9dc403</sys_update_name>
+    <active>true</active>
+    <application>cc1a576b92b246dd82145c8e6cb2b9b7</application>
+    <link_type>DIRECT</link_type>
+    <order>500</order>
+    <query>x_828868_tool_le_0_staff_dashboard.do</query>
+    <title>Staff Dashboard</title>
+  </sys_app_module>
+</record_update>

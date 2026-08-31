@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+  <sys_security_acl action="INSERT_OR_UPDATE">
+    <sys_id>2b2e3b41b494443d881405fb6cdcc95c</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_security_acl_2b2e3b41b494443d881405fb6cdcc95c</sys_update_name>
+    <active>true</active>
+    <admin_overrides>true</admin_overrides>
+    <advanced>true</advanced>
+    <applies_to/>
+    <condition/>
+    <decision_type>allow</decision_type>
+    <description/>
+    <name>x_828868_tool_le_0_loan_rec</name>
+    <operation display_value="read">read</operation>
+    <script><![CDATA[
+        answer = gs.hasRole('x_828868_tool_le_0.librarian') || current.member.user == gs.getUserID();
+    ]]></script>
+    <security_attribute/>
+    <type>record</type>
+  </sys_security_acl>
+</record_update>

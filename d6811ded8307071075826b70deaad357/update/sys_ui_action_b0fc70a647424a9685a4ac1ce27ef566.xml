@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <sys_id>b0fc70a647424a9685a4ac1ce27ef566</sys_id>
+    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
+    <sys_update_name>sys_ui_action_b0fc70a647424a9685a4ac1ce27ef566</sys_update_name>
+    <action_name>deny_request</action_name>
+    <active>true</active>
+    <client/>
+    <client_script_v2/>
+    <comments/>
+    <condition>current.status == 'pending_approval'</condition>
+    <form_action>true</form_action>
+    <form_button>true</form_button>
+    <form_button_v2>false</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>false</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style>destructive</form_style>
+    <format_for_configurable_workspace>false</format_for_configurable_workspace>
+    <hint/>
+    <isolate_script>false</isolate_script>
+    <list_action>false</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style/>
+    <messages/>
+    <name>Deny Request</name>
+    <onclick/>
+    <order>100</order>
+    <script><![CDATA[
+        current.deleteRecord();
+        action.setRedirectURL('x_828868_tool_le_0_loan_rec_list.do');
+    ]]></script>
+    <show_insert>true</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_name>Deny Request</sys_name>
+    <sys_overrides/>
+    <table>x_828868_tool_le_0_loan_rec</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible>false</ui16_compatible>
+  </sys_ui_action>
+</record_update>
