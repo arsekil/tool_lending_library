@@ -33,14 +33,6 @@
         <script><![CDATA[
         current.setValue('status', 'returned');
         current.setValue('return_date', new GlideDateTime());
-        current.update();
-
-        var equipGr = new GlideRecord('x_828868_tool_le_0_equipment');
-        if (equipGr.get(current.getValue('equipment'))) {
-            equipGr.setValue('status', 'available');
-            equipGr.update();
-        }
-
         action.setRedirectURL(current);
     ]]></script>
         <show_form_icon_only>false</show_form_icon_only>

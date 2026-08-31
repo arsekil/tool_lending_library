@@ -12,7 +12,14 @@
         <name>x_828868_tool_le_0_loan_rec</name>
         <operation display_value="write">write</operation>
         <script><![CDATA[
-        answer = gs.hasRole('x_828868_tool_le_0.librarian') || (current.member.user == gs.getUserID() && current.status == 'pending_approval');
+        if (gs.hasRole('x_828868_tool_le_0.librarian')) {
+            answer = true;
+        } else if (current.member.user == gs.getUserID() && current.status == 'pending_approval') {
+            // Members can modify their own pending loan but NOT change status or approved_by
+            answer = !(current.status.changes() || current.approved_by.changes() || current.checkout_date.changes());
+        } else {
+            answer = false;
+        }
     ]]></script>
         <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>

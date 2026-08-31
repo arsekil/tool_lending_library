@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>approve_request</action_name>
-        <active>true</active>
+        <active>false</active>
         <client>false</client>
-        <client_script_v2/>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
         <comments/>
         <condition>current.status == 'pending_approval'</condition>
         <form_action>true</form_action>
@@ -30,16 +32,17 @@
         <name>Approve Request</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[
-        current.setValue('status', 'active');
+        <script><![CDATA[        current.setValue('status', 'active');
         current.setValue('approved_by', gs.getUserID());
         current.setValue('checkout_date', new GlideDateTime());
-        current.update();
 
-        var equipGr = new GlideRecord('x_828868_tool_le_0_equipment');
-        if (equipGr.get(current.getValue('equipment'))) {
-            equipGr.setValue('status', 'checked_out');
-            equipGr.update();
+        var equipSysId = current.equipment.toString();
+        if (equipSysId) {
+            var equipGr = new GlideRecord('x_828868_tool_le_0_equipment');
+            if (equipGr.get(equipSysId)) {
+                equipGr.setValue('status', 'checked_out');
+                equipGr.update();
+            }
         }
 
         action.setRedirectURL(current);
@@ -56,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e23cf752ae4b42f6b1b60f55f70e925a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Approve Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
@@ -64,7 +67,7 @@
         <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
         <sys_update_name>sys_ui_action_e23cf752ae4b42f6b1b60f55f70e925a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-08-31 14:19:41</sys_updated_on>
+        <sys_updated_on>2026-08-31 21:17:12</sys_updated_on>
         <table>x_828868_tool_le_0_loan_rec</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

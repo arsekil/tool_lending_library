@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="1fb074e70e1e4da39acec8b9083800f0" label="Members" name="x_828868_tool_le_0_members" type="collection">
+    <element db_object_id="1fb074e70e1e4da39acec8b9083800f0" label="Members" name="x_828868_tool_le_0_members" type="collection">
         <element label="Contact Phone" max_length="20" name="contact_phone" type="string"/>
         <element label="Contact Email" max_length="255" name="contact_email" type="email"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>

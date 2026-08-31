@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Limited access role for library members</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>2qNzbnVxuVljbNTQC/FFMbur6diEYk0FvdsXLcXOefw=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_828868_tool_le_0.member</name>

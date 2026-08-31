@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="39bf7205863d4fdb95391119d640754d" label="Loan Record" name="x_828868_tool_le_0_loan_rec" type="collection">
+    <element db_object_id="39bf7205863d4fdb95391119d640754d" label="Loan Record" name="x_828868_tool_le_0_loan_rec" type="collection">
         <element display="true" label="Equipment" mandatory="true" max_length="32" name="equipment" reference="x_828868_tool_le_0_equipment" type="reference"/>
         <element label="Due Date" max_length="40" name="due_date" type="glide_date_time"/>
         <element label="Return Date" max_length="40" name="return_date" type="glide_date_time"/>

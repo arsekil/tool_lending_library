@@ -31,7 +31,7 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[
-        current.setValue('status', 'in_maintenance');
+        current.status = 'in_maintenance';
         current.update();
         action.setRedirectURL(current);
     ]]></script>

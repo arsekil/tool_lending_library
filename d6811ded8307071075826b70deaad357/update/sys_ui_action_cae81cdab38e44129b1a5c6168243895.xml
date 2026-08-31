@@ -28,45 +28,54 @@
         <list_style/>
         <messages/>
         <name>Request to Borrow</name>
-        <onclick>requestBorrow()</onclick>
+        <onclick>requestBorrowAction()</onclick>
         <order>100</order>
-        <script><![CDATA[
-function requestBorrow() {
+        <script><![CDATA[function requestBorrowAction() {
     var dueDate = prompt('Enter the due date for returning this equipment (YYYY-MM-DD):');
-    if (dueDate) {
-        var form = g_form.getFormElement();
-        var existing = form.querySelector('input[name="sysparm_due_date"]');
-        if (existing) existing.remove();
-        var input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'sysparm_due_date';
-        input.value = dueDate;
-        form.appendChild(input);
-        gsftSubmit(null, form, 'request_to_borrow');
-    }
-}
+    if (!dueDate) return;
 
-if (typeof window == 'undefined') {
-    var dueDate = request.getParameter('sysparm_due_date');
-    var memberGr = new GlideRecord('x_828868_tool_le_0_members');
-    memberGr.addQuery('user', gs.getUserID());
-    memberGr.query();
-    if (memberGr.next()) {
-        var loanGr = new GlideRecord('x_828868_tool_le_0_loan_rec');
-        loanGr.initialize();
-        loanGr.setValue('equipment', current.getUniqueValue());
-        loanGr.setValue('member', memberGr.getUniqueValue());
-        loanGr.setValue('status', 'pending_approval');
-        loanGr.setValue('due_date', dueDate);
-        var loanId = loanGr.insert();
-        gs.addInfoMessage('Your borrow request has been submitted for approval.');
-        action.setRedirectURL(loanGr);
-    } else {
-        gs.addErrorMessage('You are not registered as a member.');
-        action.setRedirectURL(current);
+    var equipmentId = g_form.getUniqueValue();
+
+    // Step 1: Look up the current user's member record
+    var memberXhr = new XMLHttpRequest();
+    memberXhr.open('GET', '/api/now/table/x_828868_tool_le_0_members?sysparm_query=user=' + g_user.userID + '&sysparm_limit=1&sysparm_fields=sys_id', false);
+    memberXhr.setRequestHeader('Accept', 'application/json');
+    memberXhr.setRequestHeader('X-UserToken', g_ck);
+    memberXhr.send();
+
+    if (memberXhr.status !== 200) {
+        g_form.addErrorMessage('Error looking up your member record.');
+        return;
     }
-}
-    ]]></script>
+
+    var memberResult = JSON.parse(memberXhr.responseText);
+    if (!memberResult.result || memberResult.result.length === 0) {
+        g_form.addErrorMessage('You are not registered as a library member.');
+        return;
+    }
+
+    var memberId = memberResult.result[0].sys_id;
+
+    // Step 2: Create the loan record via REST API
+    var loanXhr = new XMLHttpRequest();
+    loanXhr.open('POST', '/api/now/table/x_828868_tool_le_0_loan_rec', false);
+    loanXhr.setRequestHeader('Content-Type', 'application/json');
+    loanXhr.setRequestHeader('Accept', 'application/json');
+    loanXhr.setRequestHeader('X-UserToken', g_ck);
+    loanXhr.send(JSON.stringify({
+        equipment: equipmentId,
+        member: memberId,
+        status: 'pending_approval',
+        due_date: dueDate
+    }));
+
+    if (loanXhr.status === 201) {
+        var loanResult = JSON.parse(loanXhr.responseText);
+        window.location.href = '/x_828868_tool_le_0_loan_rec.do?sys_id=' + loanResult.result.sys_id;
+    } else {
+        g_form.addErrorMessage('Error creating borrow request. Please try again.');
+    }
+}]]></script>
         <show_form_icon_only>false</show_form_icon_only>
         <show_insert>true</show_insert>
         <show_list_icon_only>false</show_list_icon_only>

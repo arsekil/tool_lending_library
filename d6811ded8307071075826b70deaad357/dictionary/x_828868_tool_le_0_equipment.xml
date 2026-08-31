@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="14fd51292aaf4ab1945a81948accddc4" label="Equipment" name="x_828868_tool_le_0_equipment" type="collection">
+    <element db_object_id="14fd51292aaf4ab1945a81948accddc4" label="Equipment" name="x_828868_tool_le_0_equipment" type="collection">
         <element default="available" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="In Maintenance" sequence="3" value="in_maintenance"/>
@@ -7,7 +7,7 @@
                 <element inactive_on_update="false" label="Checked Out" sequence="2" value="checked_out"/>
             </choice>
         </element>
-        <element label="Serial/Asset Number" max_length="100" name="serial_number" type="string"/>
+        <element label="Serial/Asset Number" max_length="9" name="serial_number" read_only="true" read_only_option="instance_configured" type="string"/>
         <element default="good" label="Condition" max_length="40" name="condition" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Fair" sequence="2" value="fair"/>
@@ -24,6 +24,6 @@
                 <element inactive_on_update="false" label="Machinery" sequence="3" value="machinery"/>
             </choice>
         </element>
-        <element label="Photo" max_length="200" name="photo" type="string"/>
+        <element label="Photo" max_length="40" name="photo" type="image"/>
     </element>
 </database>
