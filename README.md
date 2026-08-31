@@ -305,17 +305,3 @@ In a single conversational session, Build Agent generated:
 This application was built entirely through natural language conversation with ServiceNow's Build Agent — no manual coding, no form-based configuration, no copy-pasting. From initial requirements to a fully deployed, production-ready application with role-based security, automated workflows, email notifications, and custom React UIs.
 
 **The future of ServiceNow development is conversational.**
-
----
-
-### How to add it to your repo
-
-1. **In GitHub**: Navigate to your repo → **Add file** → **Create new file** → name it `SHOWCASE.md` (or `README.md`) → paste the content → commit
-2. **Or via Git CLI**:
-   ```bash
-   # In your cloned repo directory
-   # Create the file, paste content, then:
-   git add SHOWCASE.md
-   git commit -m "Add showcase documentation for #BuildWithBuildAgent"
-   git push
-   ```
