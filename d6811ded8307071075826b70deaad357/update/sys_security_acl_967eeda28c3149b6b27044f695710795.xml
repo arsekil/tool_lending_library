@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
-  <sys_security_acl action="INSERT_OR_UPDATE">
-    <sys_id>967eeda28c3149b6b27044f695710795</sys_id>
-    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
-    <sys_update_name>sys_security_acl_967eeda28c3149b6b27044f695710795</sys_update_name>
-    <active>true</active>
-    <admin_overrides>true</admin_overrides>
-    <advanced>false</advanced>
-    <applies_to/>
-    <condition/>
-    <decision_type>allow</decision_type>
-    <description/>
-    <name>x_828868_tool_le_0_equipment</name>
-    <operation display_value="write">write</operation>
-    <script/>
-    <security_attribute/>
-    <type>record</type>
-  </sys_security_acl>
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing/>
+        <name>x_828868_tool_le_0_equipment</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 14:19:40</sys_created_on>
+        <sys_id>967eeda28c3149b6b27044f695710795</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_828868_tool_le_0_equipment</sys_name>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_update_name>sys_security_acl_967eeda28c3149b6b27044f695710795</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 14:19:40</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
 </record_update>

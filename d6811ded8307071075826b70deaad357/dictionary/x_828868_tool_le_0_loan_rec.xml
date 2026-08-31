@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="39bf7205863d4fdb95391119d640754d" label="Loan Record" name="x_828868_tool_le_0_loan_rec" type="collection">
+        <element display="true" label="Equipment" mandatory="true" max_length="32" name="equipment" reference="x_828868_tool_le_0_equipment" type="reference"/>
+        <element label="Due Date" max_length="40" name="due_date" type="glide_date_time"/>
+        <element label="Return Date" max_length="40" name="return_date" type="glide_date_time"/>
+        <element label="Approved By" max_length="32" name="approved_by" reference="sys_user" type="reference"/>
+        <element default="pending_approval" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Overdue" sequence="4" value="overdue"/>
+                <element inactive_on_update="false" label="Returned" sequence="3" value="returned"/>
+                <element inactive_on_update="false" label="Active" sequence="2" value="active"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="1" value="pending_approval"/>
+            </choice>
+        </element>
+        <element label="Checkout Date" max_length="40" name="checkout_date" type="glide_date_time"/>
+        <element label="Member" mandatory="true" max_length="32" name="member" reference="x_828868_tool_le_0_members" type="reference"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+        <index name="index2">
+            <element name="equipment"/>
+        </index>
+        <index name="index3">
+            <element name="member"/>
+        </index>
+    </element>
+</database>

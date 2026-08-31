@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="14fd51292aaf4ab1945a81948accddc4" label="Equipment" name="x_828868_tool_le_0_equipment" type="collection">
+        <element default="available" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In Maintenance" sequence="3" value="in_maintenance"/>
+                <element inactive_on_update="false" label="Available" sequence="1" value="available"/>
+                <element inactive_on_update="false" label="Checked Out" sequence="2" value="checked_out"/>
+            </choice>
+        </element>
+        <element label="Serial/Asset Number" max_length="100" name="serial_number" type="string"/>
+        <element default="good" label="Condition" max_length="40" name="condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Fair" sequence="2" value="fair"/>
+                <element inactive_on_update="false" label="Needs Repair" sequence="3" value="needs_repair"/>
+                <element inactive_on_update="false" label="Good" sequence="1" value="good"/>
+            </choice>
+        </element>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Hand Tool" sequence="1" value="hand_tool"/>
+                <element inactive_on_update="false" label="Other" sequence="4" value="other"/>
+                <element inactive_on_update="false" label="Power Tool" sequence="2" value="power_tool"/>
+                <element inactive_on_update="false" label="Machinery" sequence="3" value="machinery"/>
+            </choice>
+        </element>
+        <element label="Photo" max_length="200" name="photo" type="string"/>
+    </element>
+</database>

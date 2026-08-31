@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
-  <sys_security_acl action="INSERT_OR_UPDATE">
-    <sys_id>a58ff1b3ec7145d28a1a2580b0947ab2</sys_id>
-    <sys_scope display_value="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_scope>
-    <sys_update_name>sys_security_acl_a58ff1b3ec7145d28a1a2580b0947ab2</sys_update_name>
-    <active>true</active>
-    <admin_overrides>true</admin_overrides>
-    <advanced>true</advanced>
-    <applies_to/>
-    <condition/>
-    <decision_type>allow</decision_type>
-    <description/>
-    <name>x_828868_tool_le_0_members</name>
-    <operation display_value="read">read</operation>
-    <script><![CDATA[
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing/>
+        <name>x_828868_tool_le_0_members</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[
         answer = gs.hasRole('x_828868_tool_le_0.librarian') || current.user == gs.getUserID();
     ]]></script>
-    <security_attribute/>
-    <type>record</type>
-  </sys_security_acl>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 14:19:40</sys_created_on>
+        <sys_id>a58ff1b3ec7145d28a1a2580b0947ab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_828868_tool_le_0_members</sys_name>
+        <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+        <sys_update_name>sys_security_acl_a58ff1b3ec7145d28a1a2580b0947ab2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 14:19:40</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
 </record_update>

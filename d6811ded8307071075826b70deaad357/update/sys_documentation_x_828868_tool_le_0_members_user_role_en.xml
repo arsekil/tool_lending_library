@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="user_role" label="User Role" language="en" table="x_828868_tool_le_0_members">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>user_role</element>
+            <help/>
+            <hint/>
+            <label>User Role</label>
+            <language>en</language>
+            <name>x_828868_tool_le_0_members</name>
+            <plural>User Roles</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-31 14:19:39</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>User Role</sys_name>
+            <sys_package display_value="Tool Lending Library" source="x_828868_tool_le_0">d6811ded8307071075826b70deaad357</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Tool Lending Library">d6811ded8307071075826b70deaad357</sys_scope>
+            <sys_update_name>sys_documentation_x_828868_tool_le_0_members_user_role_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-31 14:19:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
